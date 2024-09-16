@@ -5,6 +5,14 @@ if [[ $1 = "5.0" ]]; then
   branch=v5.0
   mongoshell_package=debian10-5.0.0
   docker build -f Dockerfile --build-arg version=$1 --build-arg branch=$branch --build-arg mongoshell_package=$mongoshell_package -t mongo/mongodb-tests:$1 .
+elif [[ $1 = "5.1" ]]; then
+  branch=v5.1
+  mongoshell_package=debian10-5.1.0
+  docker build -f Dockerfile --build-arg version=$1 --build-arg branch=$branch --build-arg mongoshell_package=$mongoshell_package -t mongo/mongodb-tests:$1 .
+elif [[ $1 = "5.2" ]]; then
+  branch=v5.2
+  mongoshell_package=debian10-5.2.0
+  docker build -f Dockerfile --build-arg version=$1 --build-arg branch=$branch --build-arg mongoshell_package=$mongoshell_package -t mongo/mongodb-tests:$1 .
 elif [[ $1 = "6.0" ]]; then
   branch=v6.0
   mongoshell_package=debian10-v6.0-latest
