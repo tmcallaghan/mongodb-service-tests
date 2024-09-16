@@ -45,3 +45,4 @@ executor:
       eval: var testingReplication = true;
       readMode: commands
       ssl: ''
+      sslCAFile: '/global-bundle.pem'

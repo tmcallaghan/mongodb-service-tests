@@ -64,4 +64,5 @@ executor:
       eval: "testingReplication = true;"
       readMode: commands
       ssl: ''
+      sslCAFile: '/global-bundle.pem'
 

@@ -15,3 +15,4 @@ executor:
     shell_options:
       readMode: commands
       ssl: ''
+      sslCAFile: '/global-bundle.pem'
