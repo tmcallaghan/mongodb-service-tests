@@ -4,7 +4,6 @@ ARG mongoshell_package
 ARG version
 RUN apt-get update && \
     apt-get install -y git python3 python3-pip gcc libcurl4-openssl-dev libssl-dev libffi-dev python-dev wget
-RUN wget https://truststore.pki.rds.amazonaws.com/global/global-bundle.pem
 RUN pip3 install --upgrade pip
 RUN git clone --branch $branch https://github.com/mongodb/mongo.git && \
     pip3 install --user -r /mongo/etc/pip/dev-requirements.txt && \
