@@ -3,7 +3,7 @@
 #linux shell files at https://www.mongodb.org/dl/linux/x86_64
 if [[ $1 = "5.0" ]]; then
   branch=v5.0
-  mongoshell_package=debian10-5.0.0
+  mongoshell_package=debian10-5.0.27
   docker build -f Dockerfile --build-arg version=$1 --build-arg branch=$branch --build-arg mongoshell_package=$mongoshell_package -t mongo/mongodb-tests:$1 .
 elif [[ $1 = "5.1" ]]; then
   branch=v5.1
